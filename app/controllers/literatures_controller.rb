@@ -1,4 +1,5 @@
 class LiteraturesController < ApplicationController
+  load_and_authorize_resource
   # GET /literatures
   # GET /literatures.json
   def index
@@ -40,10 +41,10 @@ class LiteraturesController < ApplicationController
   # POST /literatures
   # POST /literatures.json
   def create
-    @literature = Literature.new(params[:literature])
+    @user = current_user
 
     respond_to do |format|
-      if @literature.save
+      if @literature = @user.request.literatures.create(params[:literature])
         format.html { redirect_to @literature, notice: 'Literature was successfully created.' }
         format.json { render json: @literature, status: :created, location: @literature }
       else

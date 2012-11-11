@@ -41,10 +41,10 @@ class IdeasController < ApplicationController
   # POST /ideas
   # POST /ideas.json
   def create
-    @idea = Idea.new(params[:idea])
+    @user = current_user
 
     respond_to do |format|
-      if @idea.save
+      if @idea = @user.request.ideas.create(params[:idea])
         format.html { redirect_to @idea, notice: 'Idea was successfully created.' }
         format.json { render json: @idea, status: :created, location: @idea }
       else
