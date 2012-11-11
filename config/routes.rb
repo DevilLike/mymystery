@@ -1,4 +1,6 @@
 Mymystery::Application.routes.draw do
+  resources :literatures
+
   resources :ideas
 
   resources :requests
