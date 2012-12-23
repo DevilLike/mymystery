@@ -6,8 +6,9 @@ class Ability
 
     if user.role? :administrator
       can :manage, :all
-    elsif user.role? :operator
-      can :manage, Idea
+    elsif user.role? :manager
+      can :manage, Car
+      can :manage, Deal
     else
       can :read, :all
     end

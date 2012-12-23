@@ -5,21 +5,11 @@ one:
   name: MyString
   patronymic: MyString
   phone: MyString
-  brand: MyString
-  model: MyString
-  modification: MyString
-  package_bundle: MyString
-  color: MyString
-  comment: MyText
+  passport: MyString
 
 two:
   surname: MyString
   name: MyString
   patronymic: MyString
   phone: MyString
-  brand: MyString
-  model: MyString
-  modification: MyString
-  package_bundle: MyString
-  color: MyString
-  comment: MyText
+  passport: MyString

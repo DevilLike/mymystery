@@ -1,25 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  surname: MyString
-  name: MyString
-  patronymic: MyString
-  phone: MyString
+  vin: MyString
   brand: MyString
   model: MyString
   modification: MyString
   package_bundle: MyString
   color: MyString
-  comment: MyText
+  status: 1
 
 two:
-  surname: MyString
-  name: MyString
-  patronymic: MyString
-  phone: MyString
+  vin: MyString
   brand: MyString
   model: MyString
   modification: MyString
   package_bundle: MyString
   color: MyString
-  comment: MyText
+  status: 1

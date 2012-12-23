@@ -1,26 +1,8 @@
-<%= form_for @request, :html => { :class => 'form-horizontal' } do |f| %>
+<%= form_for @car, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
-    <%= f.label :surname, :class => 'control-label' %>
+    <%= f.label :vin, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :surname, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :name, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :name, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :patronymic, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :patronymic, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :phone, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :phone, :class => 'text_field' %>
+      <%= f.text_field :vin, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
@@ -54,15 +36,15 @@
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :comment, :class => 'control-label' %>
+    <%= f.label :status, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_area :comment, :class => 'text_area' %>
+      <%= f.number_field :status, :class => 'number_field' %>
     </div>
   </div>
 
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                requests_path, :class => 'btn' %>
+                cars_path, :class => 'btn' %>
   </div>
 <% end %>

@@ -11,41 +11,67 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121111191204) do
+ActiveRecord::Schema.define(:version => 20121223192319) do
 
-  create_table "idea_requests", :force => true do |t|
-    t.integer  "idea_id"
-    t.integer  "request_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+  create_table "cars", :force => true do |t|
+    t.string   "vin"
+    t.string   "brand"
+    t.string   "model"
+    t.string   "modification"
+    t.string   "package_bundle"
+    t.string   "color"
+    t.integer  "status"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
-  create_table "ideas", :force => true do |t|
-    t.string   "title"
-    t.text     "body"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+  create_table "clients", :force => true do |t|
+    t.string   "surname"
+    t.string   "name"
+    t.string   "patronymic"
+    t.string   "phone"
+    t.string   "passport"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
   end
 
-  create_table "literature_requests", :force => true do |t|
-    t.integer  "literature_id"
-    t.integer  "request_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
+  add_index "clients", ["email"], :name => "index_clients_on_email", :unique => true
+  add_index "clients", ["reset_password_token"], :name => "index_clients_on_reset_password_token", :unique => true
 
-  create_table "literatures", :force => true do |t|
-    t.string   "title"
-    t.text     "body"
+  create_table "deals", :force => true do |t|
+    t.string   "date"
+    t.integer  "value"
+    t.integer  "client_id"
+    t.string   "vin"
+    t.string   "user_id"
+    t.integer  "number"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "requests", :force => true do |t|
-    t.text     "message"
-    t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "surname"
+    t.string   "name"
+    t.string   "patronymic"
+    t.string   "phone"
+    t.string   "brand"
+    t.string   "model"
+    t.string   "modification"
+    t.string   "package_bundle"
+    t.string   "color"
+    t.text     "comment"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "roles", :force => true do |t|
