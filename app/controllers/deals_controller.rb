@@ -1,5 +1,5 @@
 class DealsController < ApplicationController
-  load_and_authorize_resource
+  before_filter :authenticate_admin!, :only => [:destroy]
   # GET /deals
   # GET /deals.json
   def index

@@ -44,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-
+          <a class="brand" href="#">Avtoprestizh</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
               <% if client_signed_in?%>
@@ -67,13 +67,23 @@
               <li class="nav-header">Categories</li>
               <% if user_signed_in? %>
                 <li><%= link_to "Clients", clients_path  %></li>
+                <li><%= link_to "Cars", cars_path  %></li>
                 <li><%= link_to "Requets", requests_path  %></li>
+                <li><%= link_to "Sales", sales_path  %></li>
                 <li><%= link_to "Deals", deals_path  %></li>
+              <% elsif admin_signed_in? %>
+                <li><%= link_to "Clients", clients_path  %></li>
+                <li><%= link_to "Cars", cars_path  %></li>
+                <li><%= link_to "Requets", requests_path  %></li>
+                <li><%= link_to "Sales", sales_path  %></li>
+                <li><%= link_to "Deals", deals_path  %></li>
+              <% elsif client_signed_in?%>
+                <li><%= link_to "Cars", cars_path  %></li>
+                <li><%= link_to "Create request", new_request_path  %></li>
+                <li><%= link_to "Create sale", new_sale_path  %></li>
+              <% else %>
+                <li><%= link_to "Cars", cars_path  %></li>
               <% end %>
-              <% if user_signed_in? && (can? :update, @roles)%>
-                <li><%= link_to "Roles", roles_path  %></li>
-              <% end %>
-              <li><%= link_to "Cars", cars_path  %></li>
             </ul>
           </div>
         </div>
@@ -84,12 +94,19 @@
       </div>
 
       <footer class="footer">
-        <% if user_signed_in?%>
-          <%= link_to "Logout for admin", destroy_session_path(:user), :method => :delete %>
+        <% if admin_signed_in?%>
+          <%= link_to "Logout for admin", destroy_session_path(:admin), :method => :delete %>
         <% else %>
-          <%= link_to "Login as admin", new_session_path(:user), :method => :get %>
+          <%= link_to "Login as admin", new_session_path(:admin), :method => :get %>
         <% end %>
-        <p>&copy; Тарнава Кирилл ПО0901</p>
+        |
+        <% if user_signed_in?%>
+          <%= link_to "Logout for employee", destroy_session_path(:user), :method => :delete %>
+        <% else %>
+          <%= link_to "Login as employee", new_session_path(:user), :method => :get %>
+        <% end %>
+        |
+        &copy; Тарнава Кирилл ПО0901
       </footer>
 
     </div>

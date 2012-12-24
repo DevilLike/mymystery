@@ -1,5 +1,5 @@
 class CarsController < ApplicationController
-  load_and_authorize_resource
+  before_filter :authenticate_admin!, :only => [:destroy]
   # GET /cars
   # GET /cars.json
   def index

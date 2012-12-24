@@ -1,12 +1,11 @@
 Mymystery::Application.routes.draw do
-  get "users/index"
-
+  devise_for :admins
   devise_for :users
   devise_for :clients
   resources :clients
   resources :cars
   resources :deals
   resources :requests
-  resources :roles
+  resources :sales
   root :to => "cars#index"
 end

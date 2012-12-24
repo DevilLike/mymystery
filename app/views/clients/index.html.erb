@@ -26,8 +26,6 @@
         <td><%= client.passport %></td>
         <td><%= client.email %></td>
         <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_client_path(client), :class => 'btn btn-mini' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       client_path(client),
                       :method => :delete,
@@ -38,7 +36,3 @@
     <% end %>
   </tbody>
 </table>
-
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_client_path,
-            :class => 'btn btn-primary' %>

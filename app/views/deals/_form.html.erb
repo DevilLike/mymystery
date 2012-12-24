@@ -1,8 +1,13 @@
+<ul>
+  <% @deal.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+  <% end %>
+</ul>
 <%= form_for @deal, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
     <%= f.label :date, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :date, :class => 'text_field' %>
+      <%= f.text_field :date, :class => 'text_field', :value => Time.now.strftime("%d.%m.%y") %>
     </div>
   </div>
   <div class="control-group">
@@ -14,25 +19,25 @@
   <div class="control-group">
     <%= f.label :client_id, :class => 'control-label' %>
     <div class="controls">
-      <%= f.number_field :client_id, :class => 'number_field' %>
+      <%= f.number_field :client_id, :class => 'number_field', :value => 1 %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :vin, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :vin, :class => 'text_field' %>
+      <%= f.text_field :vin, :class => 'text_field', :value => '1AUKSA37864KS000000 ' %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :user_id, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :user_id, :class => 'text_field' %>
+      <%= f.text_field :user_id, :class => 'text_field', :value => current_user.id if user_signed_in? %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :number, :class => 'control-label' %>
     <div class="controls">
-      <%= f.number_field :number, :class => 'number_field' %>
+      <%= f.number_field :number, :class => 'number_field', :value => 1 %>
     </div>
   </div>
 
