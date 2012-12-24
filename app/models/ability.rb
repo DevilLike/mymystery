@@ -9,8 +9,11 @@ class Ability
     elsif user.role? :manager
       can :manage, Car
       can :manage, Deal
+      can :manage, Request
+      can :manage, Request
     else
-      can :read, :all
+      can :read, Car
+      can :manage, Request
     end
   end
 

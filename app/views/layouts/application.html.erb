@@ -44,14 +44,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Mymystery</a>
+
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <% if client_signed_in?%>
+                <li><%= link_to "Sign out", destroy_session_path(:client), :method => :delete %></li>
+              <% else %>
+                <li><%= link_to "Sign in", new_session_path(:client) %></li>
+                <li><%= link_to "Sign up", new_registration_path(:client) %></li>
+              <% end %>
             </ul>
-          </div><!--/.nav-collapse -->
+          </div>
         </div>
       </div>
     </div>
@@ -61,29 +64,35 @@
         <div class="span3">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <li class="nav-header">Categories</li>
+              <% if user_signed_in? %>
+                <li><%= link_to "Clients", clients_path  %></li>
+                <li><%= link_to "Requets", requests_path  %></li>
+                <li><%= link_to "Deals", deals_path  %></li>
+              <% end %>
+              <% if user_signed_in? && (can? :update, @roles)%>
+                <li><%= link_to "Roles", roles_path  %></li>
+              <% end %>
+              <li><%= link_to "Cars", cars_path  %></li>
             </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
+          </div>
+        </div>
         <div class="span9">
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
-      </div><!--/row-->
+      </div>
 
-      <footer>
-        <p>&copy; Tarnava Kirill PO0901</p>
+      <footer class="footer">
+        <% if user_signed_in?%>
+          <%= link_to "Logout for admin", destroy_session_path(:user), :method => :delete %>
+        <% else %>
+          <%= link_to "Login as admin", new_session_path(:user), :method => :get %>
+        <% end %>
+        <p>&copy; Тарнава Кирилл ПО0901</p>
       </footer>
 
-    </div> <!-- /container -->
-
-    <!-- Javascripts
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    </div>
     <%= javascript_include_tag "application" %>
-
   </body>
 </html>

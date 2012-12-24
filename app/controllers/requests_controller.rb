@@ -1,11 +1,9 @@
 class RequestsController < ApplicationController
   load_and_authorize_resource
-  before_filter :authenticate_client!
   # GET /requests
   # GET /requests.json
   def index
     @requests = Request.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @requests }

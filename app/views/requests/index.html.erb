@@ -16,7 +16,6 @@
       <th><%= model_class.human_attribute_name(:package_bundle) %></th>
       <th><%= model_class.human_attribute_name(:color) %></th>
       <th><%= model_class.human_attribute_name(:comment) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -34,7 +33,6 @@
         <td><%= request.package_bundle %></td>
         <td><%= request.color %></td>
         <td><%= request.comment %></td>
-        <td><%=l request.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_request_path(request), :class => 'btn btn-mini' %>

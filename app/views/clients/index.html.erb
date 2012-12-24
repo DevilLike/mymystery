@@ -12,16 +12,6 @@
       <th><%= model_class.human_attribute_name(:phone) %></th>
       <th><%= model_class.human_attribute_name(:passport) %></th>
       <th><%= model_class.human_attribute_name(:email) %></th>
-      <th><%= model_class.human_attribute_name(:encrypted_password) %></th>
-      <th><%= model_class.human_attribute_name(:reset_password_token) %></th>
-      <th><%= model_class.human_attribute_name(:reset_password_sent_at) %></th>
-      <th><%= model_class.human_attribute_name(:remember_created_at) %></th>
-      <th><%= model_class.human_attribute_name(:sign_in_count) %></th>
-      <th><%= model_class.human_attribute_name(:current_sign_in_at) %></th>
-      <th><%= model_class.human_attribute_name(:last_sign_in_at) %></th>
-      <th><%= model_class.human_attribute_name(:current_sign_in_ip) %></th>
-      <th><%= model_class.human_attribute_name(:last_sign_in_ip) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -35,16 +25,6 @@
         <td><%= client.phone %></td>
         <td><%= client.passport %></td>
         <td><%= client.email %></td>
-        <td><%= client.encrypted_password %></td>
-        <td><%= client.reset_password_token %></td>
-        <td><%= client.reset_password_sent_at %></td>
-        <td><%= client.remember_created_at %></td>
-        <td><%= client.sign_in_count %></td>
-        <td><%= client.current_sign_in_at %></td>
-        <td><%= client.last_sign_in_at %></td>
-        <td><%= client.current_sign_in_ip %></td>
-        <td><%= client.last_sign_in_ip %></td>
-        <td><%=l client.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_client_path(client), :class => 'btn btn-mini' %>

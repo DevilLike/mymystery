@@ -1,6 +1,5 @@
 class CarsController < ApplicationController
   load_and_authorize_resource
-  before_filter :authenticate_user!, :except => [:index, :show]
   # GET /cars
   # GET /cars.json
   def index
