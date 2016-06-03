@@ -1,0 +1,87 @@
+
+.yap-R-AF-162377-6 .yap-layout_block_fixed-vertical .yap-layout__logo {
+    border-bottom: 1px dotted #ccc !important;
+    width: 200px !important;
+}
+.yap-R-AF-162377-6 .yap-layout_block_fixed .yap-logo-block__text {
+    font: 8px/8px Arial !important;
+	text-transform: uppercase !important;
+	color:#ccc !important;
+}
+.yap-R-AF-162377-6 .yap-layout_block_fixed.yap-layout_block_adaptive.yap-layout_type_narrow .yap-layout__picture{
+margin-left: 39px !important;
+}
+.yap-R-AF-162377-6 .yap-layout__content{
+margin-left: 39px !important;
+}
+#yap-R-AF-162377-6 .yap-layout_block_fixed .yap-title-block__text {
+font: bold 13px/16px Arial !important;
+}
+.yap-R-AF-162377-6 .yap-layout_block_fixed-vertical .yap-layout__item {
+    vertical-align: top!important;
+	padding-top:10px!important;
+}
+.yap-R-AF-162377-6 .yap-layout_block_fixed .yap-logo-block {
+    height: 10px !important;
+}
+.yap-R-AF-162377-6 .yap-layout_block_fixed-vertical .yap-layout__logo {
+    padding-left: 0 !important;
+}
+/***************************************************************************/
+.yap-R-AF-162377-7 .yap-layout_block_fixed-vertical .yap-layout__logo {
+    border-bottom: 1px dotted #ccc !important;
+    width: 200px !important;
+}
+.yap-R-AF-162377-7 .yap-layout_block_fixed .yap-logo-block__text {
+    font: 8px/8px Arial !important;
+	text-transform: uppercase !important;
+	color:#ccc !important;
+}
+.yap-R-AF-162377-7 .yap-layout_block_fixed.yap-layout_block_adaptive.yap-layout_type_narrow .yap-layout__picture{
+margin-left: 39px !important;
+}
+.yap-R-AF-162377-7 .yap-layout__content{
+margin-left: 39px !important;
+}
+#yap-R-AF-162377-7.yap-layout_block_fixed .yap-title-block__text {
+font: bold 13px/16px Arial !important;
+}
+.yap-R-AF-162377-7 .yap-layout_block_fixed-vertical .yap-layout__item {
+    vertical-align: top!important;
+	padding-top:10px!important;
+}
+.yap-R-AF-162377-7 .yap-layout_block_fixed .yap-logo-block {
+    height: 10px !important;
+}
+.yap-R-AF-162377-7 .yap-layout_block_fixed-vertical .yap-layout__logo {
+    padding-left: 0 !important;
+}
+/******************************************************************************/
+.yap-R-AF-162377-9 .yap-layout_block_fixed-vertical .yap-layout__logo {
+    border-bottom: 1px dotted #ccc !important;
+    width: 200px !important;
+}
+.yap-R-AF-162377-9 .yap-layout_block_fixed .yap-logo-block__text {
+    font: 8px/8px Arial !important;
+	text-transform: uppercase !important;
+	color:#ccc !important;
+}
+.yap-R-AF-162377-9 .yap-layout_block_fixed.yap-layout_block_adaptive.yap-layout_type_narrow .yap-layout__picture{
+margin-left: 39px !important;
+}
+.yap-R-AF-162377-9 .yap-layout__content{
+margin-left: 39px !important;
+}
+#yap-R-AF-162377-9.yap-layout_block_fixed .yap-title-block__text {
+font: bold 13px/16px Arial !important;
+}
+.yap-R-AF-162377-9 .yap-layout_block_fixed-vertical .yap-layout__item {
+    vertical-align: top!important;
+	padding-top:10px!important;
+}
+.yap-R-AF-162377-9 .yap-layout_block_fixed .yap-logo-block {
+    height: 10px !important;
+}
+.yap-R-AF-162377-9 .yap-layout_block_fixed-vertical .yap-layout__logo {
+    padding-left: 0 !important;
+}
